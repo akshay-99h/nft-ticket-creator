@@ -1,7 +1,3 @@
-// NonFungibleTicket.cdc
-// contract to manage unique tradeable tickets (based on Flow NFT standard)
-// see: https://docs.onflow.org/cadence/tutorial/04-non-fungible-tokens/
-
 pub contract NonFungibleTicket {
 
     // set up a couple events for key deposits/withdrawals

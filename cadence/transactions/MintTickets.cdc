@@ -16,10 +16,12 @@ transaction {
         self.receiverRef = acct.getCapability<&{NonFungibleTicket.NFTReceiver}>(/public/NFTReceiver)
             .borrow()
             ?? panic("Could not borrow receiver reference")
-
+        
         // Borrow a capability for the NFTMinter in storage
         self.minterRef = acct.borrow<&NonFungibleTicket.NFTMinter>(from: /storage/NFTMinter)
             ?? panic("Could not borrow minter reference")
+
+        log(acct.address)
     }
 
     execute {
